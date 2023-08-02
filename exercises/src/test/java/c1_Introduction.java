@@ -2,6 +2,7 @@ import org.junit.jupiter.api.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -55,7 +56,8 @@ public class c1_Introduction extends IntroductionBase {
         Exception exception = assertThrows(IllegalStateException.class, () -> {
             Mono<String> serviceResult = unresponsiveService();
 
-            String result = null; //todo: change this line only
+//            String result = serviceResult.timeout(Duration.ofSeconds(20)).block(); //todo: change this line only
+            String result = serviceResult.block(Duration.ofSeconds(1)); //todo: change this line only
         });
 
         String expectedMessage = "Timeout on blocking read for 1";
