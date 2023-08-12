@@ -105,7 +105,7 @@ public class c1_Introduction extends IntroductionBase {
     public void fortune_top_five() {
         Flux<String> serviceResult = fortuneTop5();
 
-        List<String> results = emptyList(); //todo: change this line only
+        List<String> results = serviceResult.collectList().block(); //todo: change this line only
 
         assertEquals(Arrays.asList("Walmart", "Amazon", "Apple", "CVS Health", "UnitedHealth Group"), results);
         assertTrue(fortuneTop5ServiceIsCalled.get());
@@ -130,6 +130,7 @@ public class c1_Introduction extends IntroductionBase {
 
         serviceResult
                 .doOnNext(companyList::add)
+                .subscribe()
         //todo: add an operator here, don't use any blocking operator!
         ;
 
