@@ -12,15 +12,13 @@ public class App {
         flux.map(t -> t + "333").map(s -> s + "1111").subscribe(System.out::println);
 
 
-
-
-//        flux.flatMap(e -> Flux.just(e + "+1")//.delayElements(Duration.ofSeconds(1))
-//                )
-//                .subscribe(System.out::println);
-//        try {
-//            TimeUnit.SECONDS.sleep(10);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        flux.flatMap(e -> Flux.just(e + "+1")
+                        .delayElements(Duration.ofSeconds(1)))
+                .subscribe(System.out::println);
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
