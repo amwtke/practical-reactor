@@ -821,4 +821,226 @@
             </root>
         </mxGraphModel>
     </diagram>
+    <diagram id="XJ_v8Eb1knMzmJJRZR_0" name="parallel">
+        <mxGraphModel dx="2186" dy="1209" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-3" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#FFFFFF;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-1" target="5lYTjgk81egZFNnUJWOD-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-7" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;parallel&lt;/span&gt;&lt;/pre&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-3">
+                    <mxGeometry x="-0.1954" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-38" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-1" target="5lYTjgk81egZFNnUJWOD-37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-39" value="subscribe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-38">
+                    <mxGeometry x="0.017" y="-3" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-1" value="&lt;font color=&quot;#dbea06&quot;&gt;FluxDefer&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="-418" y="131" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-5" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-2" target="5lYTjgk81egZFNnUJWOD-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-6" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;doOnNext&lt;/span&gt;&lt;/pre&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-5">
+                    <mxGeometry x="-0.2308" y="-1" relative="1" as="geometry">
+                        <mxPoint x="22" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-28" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-2" target="5lYTjgk81egZFNnUJWOD-29">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1966" y="-44" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1086" y="-188"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-2" value="&lt;font color=&quot;#e3f207&quot;&gt;ParallelSource&lt;br&gt;&lt;br&gt;source =&amp;nbsp; fluxdefer&lt;br&gt;parallelism = 8&lt;br&gt;prefetch = 256&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="-37" y="108.5" width="169" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-9" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-4" target="5lYTjgk81egZFNnUJWOD-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-10" value="parallelPeek.subscrib" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-9">
+                    <mxGeometry x="-0.1118" y="-2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-26" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-4" target="5lYTjgk81egZFNnUJWOD-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1059" y="-24"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-27" value="对应" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-26">
+                    <mxGeometry x="-0.1492" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-4" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;ParallelPeek&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;source = parallelSource&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;color:#d19a66;&quot;&gt;onNext = companyList::add&lt;/span&gt;&lt;/pre&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="389" y="96.25" width="273" height="129.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-12" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-8" target="5lYTjgk81egZFNnUJWOD-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-8" value="产生8个lambdaSubscriber" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#ffffff;rounded=0;fillColor=#6a00ff;strokeColor=#3700CC;" vertex="1" parent="1">
+                    <mxGeometry x="918" y="133" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-14" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-11" target="5lYTjgk81egZFNnUJWOD-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-16" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-11" target="5lYTjgk81egZFNnUJWOD-15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-19" value="8个" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-16">
+                    <mxGeometry x="-0.2439" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-11" value="parallelPeek.subscribe(8个lambda)" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#ffffff;rounded=0;fillColor=#6a00ff;strokeColor=#3700CC;" vertex="1" parent="1">
+                    <mxGeometry x="1136" y="131" width="195" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-18" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-13" target="5lYTjgk81egZFNnUJWOD-17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-21" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-13" target="5lYTjgk81egZFNnUJWOD-20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-33" value="source一把" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-21">
+                    <mxGeometry x="0.0034" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-24" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-13" target="5lYTjgk81egZFNnUJWOD-23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-13" value="生成8个&lt;span style=&quot;color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;PeekSubscriber&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1450" y="127" width="236.5" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-25" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-15" target="5lYTjgk81egZFNnUJWOD-17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-15" value="lambdaSubscriber&lt;br&gt;&lt;br&gt;subscription =&amp;nbsp;&lt;span style=&quot;color: rgb(239, 89, 111); background-color: rgb(40, 44, 52); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;PeekSubscriber&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1128" y="270" width="205.5" height="69" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-22" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-17" target="5lYTjgk81egZFNnUJWOD-20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-17" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;PeekSubscriber[i]&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;actual = lambdaSubscriber[i]&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;parent = parallelPeek&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color: rgb(40, 44, 52); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;font color=&quot;#e5c07b&quot;&gt;s = &lt;/font&gt;ParallelSourceInner&lt;/pre&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1427" y="250" width="286.87" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-30" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-20" target="5lYTjgk81egZFNnUJWOD-29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-34" value="source一把" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-30">
+                    <mxGeometry x="-0.0941" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-20" value="parallelSource.subscribe(peekSubscriber数组)" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1827" y="116" width="313" height="93" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-23" value="生成subscriptions" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1508.25" y="-17" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-31" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;entryX=0.925;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-29" target="5lYTjgk81egZFNnUJWOD-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-165" y="227" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1575" y="596"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-32" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#ef596f;&quot;&gt;fluxDefer&lt;/span&gt;.&lt;span style=&quot;color:#61afef;&quot;&gt;subscribe&lt;/span&gt;(&lt;span style=&quot;color:#d55fde;font-style:italic;&quot;&gt;new &lt;/span&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;ParallelSourceMain&lt;/span&gt;&lt;/pre&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-31">
+                    <mxGeometry x="0.4003" y="-4" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-35" value="通过source回到了defer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-31">
+                    <mxGeometry x="-0.846" y="3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-29" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;ParallelSourceMain&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;color:#ef596f;&quot;&gt;subscribers = peekSubscribers &lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;color:#ef596f;&quot;&gt;8个&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;color:#ef596f;&quot;&gt;s = &lt;/span&gt;ArraySubscription&lt;/pre&gt;&lt;/pre&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#ffffff;rounded=0;fillColor=#d80073;strokeColor=#A50040;" vertex="1" parent="1">
+                    <mxGeometry x="2314" y="101" width="376" height="134.12" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-41" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-37" target="5lYTjgk81egZFNnUJWOD-40">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-37" value="FluxArray.subscribe(&lt;span style=&quot;color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;ParallelSourceMain&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-543.75" y="323" width="371.5" height="154" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-43" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-40" target="5lYTjgk81egZFNnUJWOD-42">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-45" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-40" target="5lYTjgk81egZFNnUJWOD-44">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-46" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#61afef;&quot;&gt;setupSubscribers&lt;/span&gt;&lt;/pre&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-45">
+                    <mxGeometry x="0.0226" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-40" value="&lt;pre style=&quot;background-color: rgb(40, 44, 52); color: rgb(187, 187, 187); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;&lt;span style=&quot;color: rgb(229, 192, 123);&quot;&gt;ParallelSourceMain.&lt;/span&gt;onSubscribe(ArraySubscription)&lt;/pre&gt;&lt;pre style=&quot;background-color: rgb(40, 44, 52); color: rgb(187, 187, 187); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;设置ParallelSourceMain.s = ArraySubscription&lt;/pre&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-607.37" y="550" width="498.75" height="166" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-42" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;ArraySubscription&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;actual = &lt;/span&gt;ParallelSourceMain&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;array = top5&lt;/pre&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="29" y="558.5" width="283.01" height="149" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-49" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-44" target="5lYTjgk81egZFNnUJWOD-48">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-50" value="依次" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-49">
+                    <mxGeometry x="-0.1271" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-44" value="&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;ParallelSourceInner&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;length = 8&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color:#282c34;color:#bbbbbb;font-family:'JetBrains Mono',monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#e5c07b;&quot;&gt;parent = &lt;/span&gt;ParallelSourceMain&lt;/pre&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-513" y="813" width="315" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-52" value="" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-48" target="5lYTjgk81egZFNnUJWOD-51">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-53" value="actual.onSubscribe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-52">
+                    <mxGeometry x="-0.0575" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-56" style="edgeStyle=none;html=1;fontSize=14;fontColor=#dbea06;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-48" target="5lYTjgk81egZFNnUJWOD-17">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1218.5" y="466" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="887" y="516"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-57" value="1 设置s字段" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-56">
+                    <mxGeometry x="-0.0131" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-48" value="subscriber[i].onSubscribe(&lt;span style=&quot;color: rgb(229, 192, 123); background-color: rgb(40, 44, 52); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 12pt;&quot;&gt;ParallelSourceInner&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-17" y="824" width="420.5" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-54" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;fontColor=#dbea06;" edge="1" parent="1" source="5lYTjgk81egZFNnUJWOD-51" target="5lYTjgk81egZFNnUJWOD-15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-55" value="2 设置subscription子段" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#dbea06;" vertex="1" connectable="0" parent="5lYTjgk81egZFNnUJWOD-54">
+                    <mxGeometry x="-0.151" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5lYTjgk81egZFNnUJWOD-51" value="lambda.onSubscriber(peeksubscriber)" style="whiteSpace=wrap;html=1;fontSize=14;fontColor=#FFFFFF;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="633.75" y="849" width="269.25" height="65" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
