@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 
 import java.time.Duration;
@@ -11,7 +10,6 @@ import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -163,9 +161,16 @@ public class c1_Introduction extends IntroductionBase {
         AtomicReference<Boolean> serviceCallCompleted = new AtomicReference<>(false);
         CopyOnWriteArrayList<String> companyList = new CopyOnWriteArrayList<>();
 
-        fortuneTop5().parallel().runOn(Schedulers.parallel())
-                .doOnNext(companyList::add)
+        fortuneTop5()
+                .parallel()
+                .runOn(Schedulers.parallel()) //!!!这里我想要说明下，runOn后面的parallelPeek们才会并行执行！
+                .runOn(Schedulers.parallel())//连续两个runOn数据取完了，所以不会重复加入。但是会在线程池中加入一倍的task处理。
+                .doOnNext(s -> {
+                    System.out.println("adding thread:" + Thread.currentThread().getName());
+                    companyList.add(s);
+                })
                 .doOnError(t -> companyList.clear())
+                .runOn(Schedulers.parallel()) //后面的onTerminate会在单独的线程中执行。
                 .doOnTerminate(() -> {
                     if (companyList.size() > 0) {
                         serviceCallCompleted.set(true);
@@ -175,7 +180,7 @@ public class c1_Introduction extends IntroductionBase {
         //todo: change this line only
 
         Thread.sleep(1000);
-
+        System.out.println(companyList.size());
         assertTrue(serviceCallCompleted.get());
 //        assertEquals(Arrays.asList("Walmart", "Amazon", "Apple", "CVS Health", "UnitedHealth Group"), companyList);
         assertTrue(companyList.contains("Walmart"));

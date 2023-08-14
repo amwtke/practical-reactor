@@ -36,7 +36,7 @@ public class IntroductionBase {
         return Flux.defer(() -> {
             fortuneTop5ServiceIsCalled.set(true);
             return Flux.just("Walmart", "Amazon", "Apple", "CVS Health", "UnitedHealth Group"
-                    ,null
+//                    ,null
             );
         });
     }
