@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Scheduler;
+import reactor.core.scheduler.Schedulers;
 import reactor.test.StepVerifier;
 
 /**
@@ -53,7 +55,15 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
         Flux<Integer> numbersFlux = numerical_service_2();
 
         //todo: do your changes here
-        Flux<String> resultSequence = null;
+        Flux<String> resultSequence = numbersFlux.map(i -> {
+            if (i > 0) {
+                return ">";
+            }
+            if (i == 0) {
+                return "=";
+            }
+            return "<";
+        });
 
         //don't change code below
         StepVerifier.create(resultSequence)
@@ -70,7 +80,8 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
     @Test
     public void cast() {
         Flux<String> numbersFlux = object_service()
-                .map(i -> (String) i); //todo: change this line only
+                .cast(String.class);
+//                .map(i -> (String) i); //todo: change this line only
 
 
         StepVerifier.create(numbersFlux)
@@ -85,6 +96,7 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
     @Test
     public void maybe() {
         Mono<String> result = maybe_service()
+                .defaultIfEmpty("no results")
                 //todo: change this line only
                 ;
 
@@ -99,9 +111,17 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
      */
     @Test
     public void sequence_sum() {
-        //todo: change code as you need
-        Mono<Integer> sum = null;
-        numerical_service();
+        Mono<Integer> sum = numerical_service()
+                .parallel()
+                .runOn(Schedulers.parallel())
+                //todo reduce怎么在多线程下执行？
+                .doOnNext(s -> {
+                    System.out.println("--Thread - " + Thread.currentThread().getName() + " s=" + s);
+                })
+                .reduce((a, b) -> {
+                    System.out.println("Thread - " + Thread.currentThread().getName() + " a:" + a + " b:" + b + " a+b=" + (a + b));
+                    return a + b;
+                });
 
         //don't change code below
         StepVerifier.create(sum)
