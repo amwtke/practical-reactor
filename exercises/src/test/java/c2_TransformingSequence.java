@@ -136,7 +136,6 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
     @Test
     public void sum_each_successive() {
         Flux<Integer> sumEach = numerical_service()
-                //todo: do your changes here
                 .scan(Integer::sum);
 
         StepVerifier.create(sumEach)
@@ -154,8 +153,7 @@ public class c2_TransformingSequence extends TransformingSequenceBase {
     @Test
     public void sequence_starts_with_zero() {
         Flux<Integer> result = numerical_service()
-                //todo: change this line only
-                ;
+                .startWith(0);
 
         StepVerifier.create(result)
                 .expectNext(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
