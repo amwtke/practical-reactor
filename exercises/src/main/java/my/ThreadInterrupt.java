@@ -19,7 +19,7 @@ public class ThreadInterrupt {
         });
         t.start();
         try {
-            Thread.sleep(100);
+            Thread.sleep(100);//为什么sleep一定要try catch起来。因为，如果线程收到（被调用）interrupt()，线程会被唤醒，而且会抛出异常——InterruptedException
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
