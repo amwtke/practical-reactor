@@ -4,6 +4,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -190,7 +191,7 @@ public class c4_LifecycleHooks extends LifecycleHooksBase {
                 .doFirst(() -> sideEffects.add("one"));
 
         List<String> orderOfExecution =
-                Arrays.asList("todo", "todo", "todo"); //todo: change this line only
+                Arrays.asList("one", "two", "three"); //todo: change this line only
 
         StepVerifier.create(just)
                 .expectNext(true)
@@ -214,8 +215,7 @@ public class c4_LifecycleHooks extends LifecycleHooksBase {
         CopyOnWriteArrayList<String> signals = new CopyOnWriteArrayList<>();
 
         Flux<Integer> flux = Flux.just(1, 2, 3)
-                //todo: change this line only
-                ;
+                .doOnEach(signal -> signals.add(signal.getType().name()));
 
         StepVerifier.create(flux)
                 .expectNextCount(3)
