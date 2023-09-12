@@ -33,7 +33,7 @@ public class VarHandlerApp {
     }
 
     final void setAcquire(Integer var) {
-        VAR.set(this, var);
+        VAR.setRelease(this, var);
     }
 
     final Integer getAcquire() {
@@ -44,6 +44,6 @@ public class VarHandlerApp {
         VarHandlerApp app = new VarHandlerApp();
         app.setAcquire(1);
         Integer acquire = app.getAcquire();
-//        System.out.println(acquire);
+        System.out.println(acquire);
     }
 }
