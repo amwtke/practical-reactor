@@ -41,9 +41,28 @@ public class VarHandlerApp {
     }
 
     public static void main(String[] args) {
+//        System.out.println("o");
         VarHandlerApp app = new VarHandlerApp();
         app.setAcquire(1);
-        Integer acquire = app.getAcquire();
-        System.out.println(acquire);
+//        Integer acquire = app.getVarOpaque();
+        Object acquire1 = VAR.getAcquire(app);
+        System.out.println(acquire1);
+
+        Thread t = new Thread(() -> {
+            try {
+                for (int i = 0; i < 10; i++) {
+                    Thread.sleep(1000);
+                    System.out.println("xiaojin");
+                }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        t.start();
+        try {
+            t.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
