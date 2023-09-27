@@ -50,7 +50,7 @@ public class VarHandlerApp {
 
         Thread t = new Thread(() -> {
             try {
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 3; i++) {
                     Thread.sleep(1000);
                     System.out.println("xiaojin");
                 }
@@ -58,6 +58,7 @@ public class VarHandlerApp {
                 throw new RuntimeException(e);
             }
         });
+        t.setName("xiaojin-thread");
         t.start();
         try {
             t.join();
